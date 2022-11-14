@@ -73,12 +73,13 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%;
+    width: 118%;
     height: 5em;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 30;
+    text-align: center;
   }
 
   .buttons-modal {
@@ -98,10 +99,11 @@
     padding: 0.25em;
     border-radius: 4px;
     border: none;
-    background: white;
+    background: #FF6A00;
     color: black;
     width: 10em;
     height: 2em;
+    justify-content: center;
   }
 
   .a-loader-title {
@@ -156,14 +158,14 @@
 
 
 
-  <div class="full-height d-flex justify-content-center" id="fullh">
+ <!-- <div class="full-height d-flex justify-content-center" id="fullh">
     <div class="card text-center" style="width: 18rem;">
       <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_ttfwgpt1.json" background="transparent"  speed="1"  style="width: 300px; height: 300px;" loop autoplay></lottie-player>
   <div class="card-body">
   <a href="#" class="btn btn-primary" id="com"onclick="comenzar()" style="display: none;">¡Comenzar!</a>
   </div>
 </div>
-</div>
+</div>-->
 
   <!--Sección de modal-->
   <!-- Button trigger modal -->
@@ -296,6 +298,11 @@
       </a-asset-item>
     </a-assets>
 
+    <a-assets>
+      <a-asset-item id="mono-02" src="models\paredes.glb">
+      </a-asset-item>
+    </a-assets>
+
     <a-marker preset="hiro" raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;"
       id="markerA">
 
@@ -305,9 +312,13 @@
       <a-entity light="type: point; intensity: 1.5; distance: 100; decay: 7" position="2 0.5 0"></a-entity>
 
 
-      <a-entity id="m-mono-01" gltf-model="#mono-01" position="0 0 0" scale=".2 .2 .2" class="clickable" gesture-handler
+      <a-entity id="m-mono-01" gltf-model="#mono-01" position="0 0 0" scale=".2 .2 .2" rotation="-90 0 0" class="clickable" gesture-handler
         visible="true" animation-mixer="timeScale: 0; loop: 0;"  shadow="cast:true; receive:true">
       </a-entity>
+
+      <a-entity id="m-mono-02" gltf-model="#mono-02" position="0 0 0" scale=".2 .2 .2" rotation="-90 0 0" class="clickable" gesture-handler
+      visible="true" animation-mixer="timeScale: 0; loop: 0;"  shadow="cast:true; receive:true">
+    </a-entity>
       b
 
 
