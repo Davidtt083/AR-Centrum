@@ -171,98 +171,9 @@
   <!-- Button trigger modal -->
 
 
-  <!-- Modal 1 -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Agilidad</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          Parte de la estrategia de “Los tres elefantes” consistió en implementar una solución rápida y ágil.
-          Comenzaron a innovar digitalmente con los recursos que ya tenían a su alcance, es decir, no crearon nuevas
-          herramientas ni desarrollaron tecnología especifica para cubrir la necesidad que se suscito en ese momento.
-          Por el contrario, se apropiaron de tecnología existente como WhatsApp y utilizaron uno de los recursos más
-          importantes con los que contaban: las vendedoras de la tienda que además conocen el almacén y los productos
-          que se venden. Es por eso que su implementación ágil consistió en que las vendedoras se comunicaran con los
-          clientes por video llamada de whatsapp mientras mostraban los productos del almacén, hasta que el cliente
-          eligiera lo que quería comprar.
 
-        </div>
 
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Modal 1 -->
-
-  <!-- Modal 2 -->
-  <div class="modal fade" id="exampleModal-2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">TI a la mano
-          </h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <picture>
-            <source srcset="imagenes\Pantalla-1.png" type="image/svg+xml">
-            <img src="imagenes\Pantalla-1.png" class="img-fluid img-thumbnail" alt="...">
-          </picture>
-          La principal forma de comunicación con los clientes es mediante herramientas online, principalmente a través
-          de WhatsApp. Adicional a este medio de comunicación, se crea una página web muy sencilla en donde el único
-          contenido es un breve catálogo de productos y el número telefónico para que se comuniquen al almacén y
-          realicen sus compras por videollamada, teniendo la opción de recoger su pedido en tienda o que se les envíe a
-          su domicilio.
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Modal 2 -->
-
-  <!-- Modal 3 -->
-  <div class="modal fade" id="exampleModal-3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Nuevo modelo comercial
-          </h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <picture>
-            <source srcset="imagenes\Pantalla-2.png" type="image/svg+xml">
-            <img src="imagenes\Pantalla-2.png" class="img-fluid img-thumbnail" alt="...">
-          </picture>
-          Mientras está en marcha la solución con los clientes, en “Los tres elefantes” se está creando un nuevo modelo
-          comercial que responde a las nuevas necesidades de los clientes.
-          El nuevo modelo de negocio consistió en crear la versión de negocio digital que cuenta con más de 15,000
-          productos en línea, con oportunidad de que el cliente compre y pague directamente en la plataforma; teniendo
-          ahora una plataforma ecommerce y una mayor cercanía y mejor relación con los clientes que prefieren acudir de
-          manera presencial a las tiendas físicas.
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-        </div>
-      </div>
-    </div>
-  </div>
+ 
   <!-- Modal 3 -->
 
   <!--Sección de modal-->
@@ -290,11 +201,10 @@
   <audio id="audio" src="audio\RA-G.wav"></audio>
   </div>
 
-  <a-scene arjs embedded renderer="logarithmicDepthBuffer: true;" vr-mode-ui="enabled: false" gesture-detector
-    id="scene" loading-screen="dotsColor: red; backgroundColor: black">
-
+  <a-scene embedded arjs='sourceType: webcam;' embedded renderer="logarithmicDepthBuffer: true;" vr-mode-ui="enabled: false" gesture-detector
+  id="scene">
     <a-assets>
-      <a-asset-item id="mono-01" src="models\mono-01 - copia.glb">
+      <a-asset-item id="mono-01" src="models\RA-giulio.glb">
       </a-asset-item>
     </a-assets>
 
@@ -312,7 +222,7 @@
       <a-entity light="type: point; intensity: 1.5; distance: 100; decay: 7" position="2 0.5 0"></a-entity>
 
 
-      <a-entity id="m-mono-01" gltf-model="#mono-01" position="-2 -15 -7" scale=".2 .2 .2" rotation="0 0 0" class="clickable" gesture-handler
+      <a-entity id="m-mono-01" gltf-model="#mono-01" position="0 0 0" scale=".05 .05 .05" rotation="0 0 0" class="clickable" gesture-handler
         visible="true" animation-mixer="timeScale: 0; loop: 0;"  shadow="cast:true; receive:true">
       </a-entity>
 
